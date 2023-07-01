@@ -1,0 +1,36 @@
+<html lang="tur">
+<head>
+<title>login page</title>
+<script src="./login.js"></script>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<h1 id="header"> login or sign up</h1>
+
+<div id="signup">
+<h4>sign up</h4>
+<input id="username" placeholder="username" maxlength="25"><br><br>
+<input id="password" placeholder="password" type="password" maxlength="100" onchange="checkpasswordrules('password','passwordconfirm')"><br><br>
+<input id="passwordconfirm" placeholder="password confirm" type="password" maxlength="100" onchange="checkpasswordrules('passwordconfirm','password')"><br>
+<input type="checkbox" onclick=";if(this.checked==true){
+    document.getElementById('password').type='text'
+    document.getElementById('passwordconfirm').type='text'
+}else{
+    document.getElementById('password').type='password'
+    document.getElementById('passwordconfirm').type='password'
+}"> &nbsp  &nbsp show password
+<br>
+<button onclick="signupfunction()">sign up</button>
+<h5 id="signinalert"></h5>
+</div>
+
+<div id="login">
+<h4>login</h4><br>
+<input id="loginusername" placeholder="username"><br><br>
+<input id="loginpassword" placeholder="password"><br><br><br><br>
+<button onclick="loginfunction()">login</button>
+</div>
+
+
+</body>
+</html>
